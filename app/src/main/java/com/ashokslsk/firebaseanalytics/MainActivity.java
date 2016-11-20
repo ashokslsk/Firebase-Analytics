@@ -31,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE,"Button");
                 mFirebaseAnlytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT,bundle);
 
+                mFirebaseAnlytics.setAnalyticsCollectionEnabled(true);
+
+                mFirebaseAnlytics.setMinimumSessionDuration(20000);
+
+                mFirebaseAnlytics.setSessionTimeoutDuration(500);
+
+                mFirebaseAnlytics.setUserId("123");
+
+                mFirebaseAnlytics.setUserProperty("123","Values");
+
+
             }
         });
 
